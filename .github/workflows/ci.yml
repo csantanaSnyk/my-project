@@ -27,4 +27,8 @@ jobs:
 
     - name: Build with Gradles
       run: ./gradlew build
-         
+
+  publish:
+
+      needs: build
+
