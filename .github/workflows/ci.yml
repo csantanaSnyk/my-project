@@ -27,3 +27,11 @@ jobs:
 
     - name: Build with Gradle
       run: ./gradlew build
+      
+    - name: Run Snyk to check Docker image for vulnerabilities
+      uses: snyk/actions/docker@master
+      env:
+        SNYK_TOKEN: ${{secrets.SNYK_TOKEN}}
+      with:
+        image: $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        command: monitor
