@@ -5,9 +5,9 @@ name: Java CI with Gradle
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build-java:
@@ -27,9 +27,4 @@ jobs:
 
     - name: Build with Gradle
       run: ./gradlew build
-<<<<<<< HEAD:.github/workflows/ci.yml
          
-=======
-
-  
->>>>>>> 6f5d465b020957927ffd0779e949aa332472af29:.github/workflows/ci.yaml
